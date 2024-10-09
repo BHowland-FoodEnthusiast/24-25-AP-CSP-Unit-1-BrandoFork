@@ -18,11 +18,11 @@ for s in turtle_shapes:
 #
 startx = 0
 starty = 0
-roty = 0
+rot_y = 0
 #
 for t in my_turtles:
   t.goto(startx, starty)
-  t.setheading(roty)
+  t.setheading(rot_y)
   t.pendown()
   t.right(45)
   t.forward(50)
@@ -31,7 +31,7 @@ for t in my_turtles:
 #
   startx = t.xcor()
   starty = t.ycor()
-  roty = t.heading()
+  rot_y = t.heading()
 
 wn = trtl.Screen()
 wn.mainloop()
