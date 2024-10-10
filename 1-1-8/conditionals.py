@@ -44,17 +44,17 @@ def letter_grade():
 while status:
     menu()
     choice = int(input("Enter your choice: "))
-    if choice ==1:
+    if choice == 1:
         show_grades()
-    elif choice ==2:
+    elif choice == 2:
         new_grade()
-    elif choice ==3:
+    elif choice == 3:
         remove_grade()
 
 
-    elif choice ==4:
+    elif choice == 4:
         letter_grade()
-    elif choice ==5:
+    elif choice == 5:
         print("Thank you for using our program.  Have a great day!")
         status = False
     else:
