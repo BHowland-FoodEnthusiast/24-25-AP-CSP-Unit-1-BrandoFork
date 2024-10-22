@@ -1,16 +1,24 @@
 import turtle as trtl
+global xpos, ypos
+# initialize turtle to begin painting
+def init():
+    global xpos, ypos
+    xpos = 250
+    ypos = 300
+    clouds.speed(0)
 
-# move pen to start making clouds
+
 clouds = trtl.Turtle()
 clouds.penup()
-global xpos, ypos
-xpos = 250
-ypos = 300
-clouds.bgcolor = 'gray'
+
+
+
+init()
+clouds.circle(360, 360, 360)
 # making and coloring clouds
 def cloud_draw():
     global xpos, ypos
-    for cloud in range(15):
+    for cloud in range(3):
         if cloud % 2 == 0:
             ypos -= 20
             xpos -= 50
@@ -28,7 +36,10 @@ def cloud_draw():
         # move pen to make next cloud
         clouds.penup()
         clouds.pendown()
+for cloud in range(2):
+    xpos -= 150
+    ypos = 300
+    cloud_draw()
 
-cloud_draw()
 wn = trtl.Screen()
 wn.mainloop()
