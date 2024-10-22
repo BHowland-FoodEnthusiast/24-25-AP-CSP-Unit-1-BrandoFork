@@ -41,5 +41,7 @@ for cloud in range(2):
     ypos = 300
     cloud_draw()
 
+#painting the ground
+
 wn = trtl.Screen()
 wn.mainloop()
