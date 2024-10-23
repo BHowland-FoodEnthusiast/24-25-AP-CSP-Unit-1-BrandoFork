@@ -29,7 +29,7 @@ def cloud_draw():
         clouds.pendown()
 def lightning():
     global xpos, ypos
-    ypos = 0
+    ypos = -230
     xpos = -20
     clouds.width(5)
     clouds.penup()
@@ -69,6 +69,8 @@ for cloud in range(3):
     ypos = 300
     cloud_draw()
 
+
+
 #method for painting the grass
 def grass_draw():
     global xpos, ypos
@@ -78,6 +80,7 @@ def grass_draw():
     clouds.goto(xpos, ypos)
     clouds.pendown()
     clouds.left(90)
+
 
 #paints the grass
 grass_draw()
@@ -89,6 +92,8 @@ for total in range(1000):
     clouds.goto(xpos, ypos)
     clouds.penup()
 
+#draw lightning
+lightning()
 
 #draw raindrops
 for number in range(1000):
