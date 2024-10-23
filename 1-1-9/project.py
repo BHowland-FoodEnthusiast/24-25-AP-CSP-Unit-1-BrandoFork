@@ -1,5 +1,6 @@
 import turtle as trtl
 global xpos, ypos
+import random as rd
 # initialize turtle to begin painting
 def init():
     global xpos, ypos
@@ -40,8 +41,28 @@ for cloud in range(2):
     xpos -= 150
     ypos = 300
     cloud_draw()
-
 #painting the ground
+def grass_draw():
+    global xpos, ypos
+    xpos = -470
+    ypos = -400
+    clouds.penup()
+    clouds.goto(xpos, ypos)
+    clouds.pendown()
+    clouds.left(90)
+grass_draw()
+clouds.color('#038c25')
+for range in range(700):
+    clouds.forward(rd.randint(50, 100))
+    xpos += 2
+    clouds.pendown()
+    clouds.goto(xpos, ypos)
+    clouds.penup()
+
+
 
 wn = trtl.Screen()
+wn = trtl.Screen()
+#painting the sky
+wn.bgcolor('#B2BEB5')
 wn.mainloop()
