@@ -24,7 +24,7 @@ def plot_distribution(distribution):
 
 
 # Example usage
-num_students = 30  # Adjust the number of students as needed
-num_runs = 100
+num_students = 8  # Adjust the number of students as needed
+num_runs = 10
 distribution = run_simulation(num_students, num_runs)
 plot_distribution(distribution)

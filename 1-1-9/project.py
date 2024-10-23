@@ -4,7 +4,7 @@ import random as rd
 # initialize turtle to begin painting
 def init():
     global xpos, ypos
-    xpos = 250
+    xpos = 480
     ypos = 300
     clouds.speed(0)
 
@@ -34,10 +34,11 @@ def cloud_draw():
         clouds.begin_fill()
         clouds.circle(50)
         clouds.end_fill()
-        # move pen to make next cloud
+
         clouds.penup()
         clouds.pendown()
-for cloud in range(2):
+#making three clouds
+for cloud in range(3):
     xpos -= 150
     ypos = 300
     cloud_draw()

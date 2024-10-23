@@ -28,7 +28,7 @@ class PityRandom:
         self.weights = [1] * self.num_students
         for student in self.history:
             if 1 <= student <= self.num_students:
-                self.weights[student - 1] *= 0.5  # Decrease weight for recently picked students
+                self.weights[student - 1] *= 0.25  # Decrease weight for recently picked students
 
     def load_history(self):
         if os.path.exists('history.json'):
